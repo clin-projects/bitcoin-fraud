@@ -2,7 +2,7 @@
 
 Assignment submitted for Princeton's COS424 course (Fundamentals of Machine Learning) in March 2015
 
-Refer to [writeup](./writeup/report_bitcoin predictions.pdf) for further details
+Refer to [writeup](./writeup/report_bitcoin%20predictions.pdf) for further details
 
 # Data description
 
@@ -12,9 +12,15 @@ Test set contains 10K addresses which did not interact with the individuals in t
 
 The objective is to predict whether the pairs in the test data traded or not with the individuals in the training set
 
-# Models implemented
+# Models
 
-We implemented singular value decomposition (SVD), k-means clustering (four versions), and support vector machine (SVM)
+We used the following models
+
+1. singular value decomposition (SVD)
+
+2. k-means clustering (four versions)
+
+3. support vector machine (SVM)
 
 # Work-in-progress
 
