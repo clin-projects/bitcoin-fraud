@@ -31,13 +31,16 @@ if __name__ == "__main__":
     parser.add_argument('-t', '--threshold', type=int, help = '1 to use binary transacted vs not transacted, 0 to use # of transactions',  choices = [0,1], required=True)
     parser.add_argument('-S', '--SVD', action="store_true", help= 'run SVD')
     parser.add_argument('-sn', '--num_sing', type=int, help= 'number of singular values for SVD')
+    parser.add_argument('-SVM', '--SVM', action="store_true", help= 'run SVM')
+    parser.add_argument('-nzero', '--num_zeroes', type=int, help= 'number of zeroes to predict for SVM')
+    """
     parser.add_argument('-K1', '--kmeans1', action="store_true", help= 'run kmeans algorithm 1')
     parser.add_argument('-K2', '--kmeans2', action="store_true", help= 'run kmeans algorithm 2')
     parser.add_argument('-K3', '--kmeans3', action="store_true", help= 'run kmeans algorithm 3')
     parser.add_argument('-K4', '--kmeans4', action="store_true", help= 'run kmeans algorithm 4')
     parser.add_argument('-nc', '--num_clusters', type=int, help= 'number of clusters for kmeans')
-    parser.add_argument('-SVM', '--SVM', action="store_true", help= 'run SVM')
-    parser.add_argument('-nzero', '--num_zeroes', type=int, help= 'number of zeroes to predict for SVM')
+    """
+
 
     args = parser.parse_args()
     print args
@@ -54,6 +57,7 @@ if __name__ == "__main__":
         RunSVD(train_data, test_data, num_sing = args.num_sing, threshold=args.threshold)
     if args.SVM:
         RunSVM(train_data, test_data, num_zeroes=args.num_zeroes)
+    """
     if args.kmeans1:
         RunKmeans(train_data, test_data, algorithmID = 1, num_clusters = args.num_clusters, threshold = args.threshold)
     if args.kmeans2:
@@ -62,3 +66,4 @@ if __name__ == "__main__":
         RunKmeans(train_data, test_data, algorithmID = 3, num_clusters = args.num_clusters, threshold = args.threshold)
     if args.kmeans4:
         RunKmeans(train_data, test_data, algorithmID = 4, num_clusters = args.num_clusters, threshold = args.threshold)
+    """
