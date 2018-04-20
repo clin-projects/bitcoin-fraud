@@ -4,17 +4,19 @@ Assignment submitted for Princeton's COS424 course (Fundamentals of Machine Lear
 
 Refer to [writeup](./writeup/report_bitcoin%20predictions.pdf) for further details
 
+The objective is to predict whether two individuals will exchange Bitcoin, based on analysis of the blockchain
+
 # Data description
 
-Training set contains 3.3M transactions among ~440K unique addresses, for the year between March 2012 to March 2013
+The data is derived from the Bitcoin blockchain.
 
-Test set contains 10K addresses which did not interact with the individuals in the training set during March 2012-13; 1K of them later interacted with the training set individuals between March 2013-14
+The *training set* comprises 3.3M transactions among ~440K unique addresses, for the year March 2012-13. Refer to the addresses in the training set as the _training addresses_.
 
-The objective is to predict whether the pairs in the test data traded or not with the individuals in the training set
+The *test set* consists of 10K addresses which did not transact with the training addresses during March 2012-13; 1K of them later transacted with at least one of the training addresses between March 2013-14
 
 # Models
 
-We used the following models
+We performed predictions using the following models
 
 1. singular value decomposition (SVD)
 
@@ -24,4 +26,4 @@ We used the following models
 
 # Work-in-progress
 
-Have uploaded a partial collection of code; still need to clean up the rest
+A partial collection of code has been updated; still need to clean up the rest
